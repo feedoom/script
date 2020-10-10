@@ -22,5 +22,6 @@ function isEqual(obj1, obj2) {
   return true;
 }
 
-let test = "hell";
-export { isEqual, test };
+export {
+  isEqual
+};
