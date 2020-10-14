@@ -1,0 +1,9 @@
+/*  手写清除浮动 */
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1; /* 兼容IE */
+}
