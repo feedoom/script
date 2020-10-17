@@ -12,3 +12,15 @@ function getUrlSearch(url) {
   })
   return search
 }
+
+
+function getUrlSearch(url) {
+  let reg = /[?&]([^=&#]+)=([^&#]*)/g;
+  let res = [...url.matchAll(reg)];
+  if (!res || res.length == 0) return {};
+  let search = {};
+  res.forEach((item) => {
+    search[item[1]] = item[2];
+  });
+  return search;
+}
