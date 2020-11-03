@@ -1,6 +1,9 @@
 class maxHeap {
-  constructor() {
+  constructor(arr) {
     this.heap = []
+    if (arr) {
+      this.init(arr)
+    }
   }
   getParentIndex(index) {
     return Math.floor((index - 1) / 2)
